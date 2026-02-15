@@ -1,0 +1,27 @@
+# Lean build artifacts
+lean/.lake/
+lean/build/
+lean/lake-packages/
+lean/lakefile.olean
+lean/*.olean
+
+# Lake manifest (generated)
+lean/lake-manifest.json
+
+# Editor files
+.vscode/
+.DS_Store
+*~
+*.swp
+*.swo
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
