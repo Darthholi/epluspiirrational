@@ -22,10 +22,11 @@ This file sets up the basic definitions and axioms needed for proving e+π is ir
 import Mathlib.Analysis.Complex.Basic
 import Mathlib.Analysis.SpecialFunctions.Exp
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
-import Mathlib.Data.Complex.Exponential
+import Mathlib.Analysis.Complex.Exponential
 import Mathlib.FieldTheory.Minpoly.Basic
-import Mathlib.RingTheory.Algebraic
-import Mathlib.Data.Real.Irrational
+import Mathlib.RingTheory.Algebraic.Defs
+import Mathlib.Data.Real.Sqrt
+import Mathlib.NumberTheory.Real.Irrational
 
 noncomputable section
 
@@ -76,7 +77,7 @@ def e_real : ℝ := Real.exp 1
 
 lemma e_eq_exp_one : (e_real : ℂ) = e := by
   unfold e_real e
-  simp [Complex.exp_ofReal_re]
+  simp [Complex.ofReal_exp]
 
 end EPlusPiIrrational
 

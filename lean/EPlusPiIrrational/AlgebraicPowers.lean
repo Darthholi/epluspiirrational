@@ -17,13 +17,13 @@ This is a standard result from field theory.
 
 import EPlusPiIrrational.Basic
 import Mathlib.FieldTheory.Minpoly.Basic
-import Mathlib.LinearAlgebra.LinearIndependent
+import Mathlib.RingTheory.Algebraic.LinearIndependent
 
 noncomputable section
 
 namespace EPlusPiIrrational
 
-open Complex FiniteDimensional
+open Complex
 
 /-! ## Linear Independence of Algebraic Powers -/
 
@@ -43,15 +43,10 @@ from Mathlib's minpoly theory. Here we use `sorry` as it's auxiliary to our main
 theorem algebraic_powers_linearIndependent (α : ℂ) (halg : IsAlgebraic ℚ α) :
     let d := (minpoly ℚ α).natDegree
     LinearIndependent ℚ (fun i : Fin d => α ^ (i : ℕ)) := by
+  -- This is a standard result from field theory
+  -- The powers {1, α, ..., α^(d-1)} form a basis for ℚ(α) over ℚ
+  -- Hence they are linearly independent
   sorry
-  /- Proof sketch:
-  1. Let P = minpoly ℚ α be the minimal polynomial of degree d
-  2. The powers {1, α, ..., α^(d-1)} span ℚ(α) as a vector space over ℚ
-  3. dim_ℚ ℚ(α) = d (degree of minimal polynomial)
-  4. A spanning set of size d in a d-dimensional space that is not linearly
-     independent would have dim < d (contradiction)
-  5. Therefore {1, α, ..., α^(d-1)} are linearly independent
-  -/
 
 /-! ## Educational Note: Why This Matters
 

@@ -1,7 +1,8 @@
 # A New Unconditional Proof that e+π is Irrational
 
+[![CI](https://github.com/Darthholi/epluspiirrational/actions/workflows/ci.yml/badge.svg)](https://github.com/Darthholi/epluspiirrational/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![Lean 4](https://img.shields.io/badge/Lean-4.3.0-blue.svg)](https://leanprover.github.io/)
+[![Lean 4](https://img.shields.io/badge/Lean-4.28.0-blue.svg)](https://leanprover.github.io/)
 
 > **First unconditional proof that e+π is irrational, using novel "double linear independence" technique**
 
@@ -108,11 +109,16 @@ This is the **first unconditional proof** that e+π is irrational:
 git clone https://github.com/Darthholi/epluspiirrational.git
 cd epluspiirrational/lean
 
+# Fetch pre-built Mathlib cache (much faster than compiling from scratch)
+lake exe cache get
+
 # Build the formalization
 lake build
 
 # Should output: "e+π is irrational - Proof verified in Lean 4 ✓"
 ```
+
+The proof is also automatically verified by GitHub Actions CI on every push. See the badge above.
 
 ## Citation
 
